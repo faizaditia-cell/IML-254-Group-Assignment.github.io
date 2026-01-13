@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NovaTech Solutions | About Us</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* =======================
+   Base Style
+   ======================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d; /* dark background */
+    color: #e0e0e0;           /* light gray text */
+}
+
+/* =======================
+   Sidebar Navigation
+   ======================= */
+.sidebar {
+    width: 220px;
+    background-color: #1a1a1a; /* charcoal sidebar */
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    text-align: center;
+    color: #39ff14; /* neon green accent */
+    margin-bottom: 20px;
+}
+
+/* Links */
+.sidebar a, .dropdown-btn {
+    display: block;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    background-color: #1a1a1a;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sidebar a:hover, .dropdown-btn:hover {
+    background-color: #333;
+    color: #ff00ff; /* neon magenta hover */
+}
+
+/* =======================
+   Dropdown (Sub-menu)
+   ======================= */
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+}
+
+.dropdown-container a {
+    padding-left: 40px;
+    font-size: 13px;
+}
+
+.dropdown-container a:hover {
+    background-color: #333;
+    color: #39ff14;
+}
+
+/* =======================
+   Main Content
+   ======================= */
+.main {
+    margin-left: 220px;
+    padding: 30px;
+}
+
+.page-title {
+    color: #ff00ff; /* neon magenta */
+}
+
+/* Content Box */
+.content-box {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    line-height: 1.7;
+    color: #e0e0e0;
+    box-shadow: 0 0 10px #39ff14; /* glowing effect */
+}
+
+.content-box h2 {
+    color: #39ff14; /* neon green headings */
+    margin-top: 25px;
+}
+
+/* =======================
+   Footer
+   ======================= */
+.disclaimer {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #1a1a1a;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+    border-top: 1px solid #39ff14;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelector(".dropdown-btn").onclick=function(){
+    let d=this.nextElementSibling;
+    d.style.display=d.style.display==="block"?"none":"block";
+  };
+});
+</script>
+</head>
+
+<body>
+
+<div class="sidebar">
+<h3>NOVATECH</h3>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<button class="dropdown-btn">Services ▾</button>
+<div class="dropdown-container">
+  <a href="services.html">All Services</a>
+  <a href="web-development.html">Web Development</a>
+  <a href="system-development.html">System Development</a>
+  <a href="it-support.html">IT Support</a>
+  <a href="cloud-solutions.html">Cloud Solutions</a>
+  <a href="cybersecurity.html">Cybersecurity</a>
+</div>
+<a href="projects.html">Projects</a>
+<a href="policies.html">Company Policies</a>
+<a href="careers.html">Careers</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="disclaimer.html">Disclaimer</a>
+<a href="group.html">Group</a>
+</div>
+
+<div class="main">
+<h1 class="page-title">About NovaTech Solutions</h1>
+
+<div class="content-box">
+<p>
+NovaTech Solutions is an IT solutions company that provides technology services
+to help businesses and organizations work more efficiently. We focus on
+delivering simple, reliable, and practical digital solutions that meet
+everyday business needs.
+</p>
+
+<p>
+We are made up of a small team of IT professionals who design, develop, and
+maintain websites and systems. Our goal is to help clients use technology in
+a way that is easy to understand and effective for their operations.
+</p>
+
+<p>
+Our services include website development, system development, IT support,
+cloud solutions, and basic cybersecurity services. We aim to provide solutions
+that are user-friendly, secure, and suitable for different types of
+organizations.
+</p>
+
+<h2>Our Vision</h2>
+<p>
+To become a trusted IT solutions provider by offering quality services and
+building long-term relationships with our clients.
+</p>
+
+<h2>Our Mission</h2>
+<p>
+To deliver dependable IT solutions, provide professional support, and
+continuously improve our services to meet client requirements.
+</p>
+
+<h2>Our Values</h2>
+<p>
+We believe in professionalism, responsibility, teamwork, and continuous
+learning to keep up with changes in technology.
+</p>
+</div>
+
+<div class="disclaimer">
+<p>
+This website is not the official website of NovaTech Solutions.
+It was developed for learning XHTML & CSS purposes only.
+</p>
+<p>&copy; 2025 NovaTech Solutions. All rights reserved.</p>
+<p>Recommended Browser: Google Chrome | Resolution: 1366 × 768</p>
+<p>Last Updated: January 2026</p>
+</div>
+</div>
+
+</body>
+</html>

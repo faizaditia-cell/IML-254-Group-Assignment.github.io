@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NovaTech Solutions | FAQ</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* =======================
+   Base Styles (Neon Tech Theme)
+   ======================= */
+body{
+  margin:0;
+  font-family:Arial,sans-serif;
+  background:#0d0d0d; /* dark background */
+  color:#e0e0e0;      /* light gray text */
+}
+
+/* Sidebar */
+.sidebar{
+  width:220px;
+  background:#1a1a1a; /* charcoal sidebar */
+  height:100vh;
+  position:fixed;
+  padding-top:20px;
+  overflow-y:auto;
+}
+.sidebar h3{
+  text-align:center;
+  color:#39ff14; /* neon green */
+}
+.sidebar a,.dropdown-btn{
+  display:block;
+  color:#e0e0e0;
+  padding:10px 20px;
+  text-decoration:none;
+  border:none;
+  background:#1a1a1a;
+  text-align:left;
+  cursor:pointer;
+  transition:background-color 0.3s,color 0.3s;
+}
+.sidebar a:hover,.dropdown-btn:hover{
+  background:#333;
+  color:#ff00ff; /* neon magenta hover */
+}
+.dropdown-container{
+  display:none;
+  background:#262626;
+}
+.dropdown-container a{
+  padding-left:40px;
+  font-size:13px;
+}
+.dropdown-container a:hover{
+  background:#333;
+  color:#39ff14;
+}
+
+/* Main */
+.main{
+  margin-left:220px;
+  padding:30px;
+}
+.page-title{
+  color:#ff00ff; /* neon magenta */
+}
+.content-box{
+  background:#1a1a1a;
+  padding:20px;
+  border-radius:8px;
+  line-height:1.6;
+  box-shadow:0 0 10px #39ff14; /* green glow */
+}
+
+/* FAQ Styles */
+.faq-item{
+  margin-bottom:20px;
+}
+.faq-question{
+  font-weight:bold;
+  color:#39ff14; /* neon green question */
+  cursor:pointer;
+  transition:color 0.3s;
+}
+.faq-question:hover{
+  color:#ff00ff; /* magenta hover */
+}
+.faq-answer{
+  display:none;
+  margin-top:8px;
+  color:#ccc;
+  padding-left:10px;
+  border-left:2px solid #ff00ff;
+}
+
+/* Footer */
+.disclaimer{
+  margin-top:40px;
+  padding:15px;
+  background:#1a1a1a;
+  text-align:center;
+  font-size:12px;
+  color:#ccc;
+  border-top:1px solid #39ff14;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  const btn=document.querySelector(".dropdown-btn");
+  if(btn){
+    btn.onclick=function(){
+      const d=this.nextElementSibling;
+      d.style.display=d.style.display==="block"?"none":"block";
+    };
+  }
+
+  // FAQ toggle
+  document.querySelectorAll(".faq-question").forEach(q=>{
+    q.addEventListener("click",()=>{
+      let answer=q.nextElementSibling;
+      answer.style.display=answer.style.display==="block"?"none":"block";
+    });
+  });
+});
+</script>
+</head>
+
+<body>
+
+<div class="sidebar">
+  <h3>NOVATECH</h3>
+  <a href="index.html">Home</a>
+  <a href="about.html">About Us</a>
+  <button class="dropdown-btn">Services ▾</button>
+  <div class="dropdown-container">
+    <a href="services.html">All Services</a>
+    <a href="web-development.html">Web Development</a>
+    <a href="system-development.html">System Development</a>
+    <a href="it-support.html">IT Support</a>
+    <a href="cloud-solutions.html">Cloud Solutions</a>
+    <a href="cybersecurity.html">Cybersecurity</a>
+  </div>
+  <a href="projects.html">Projects</a>
+  <a href="policies.html">Company Policies</a>
+  <a href="careers.html">Careers</a>
+  <a href="faq.html">FAQ</a>
+  <a href="contact.html">Contact</a>
+  <a href="disclaimer.html">Disclaimer</a>
+  <a href="group.html">Group</a>
+</div>
+
+<div class="main">
+  <h1 class="page-title">Frequently Asked Questions</h1>
+  <div class="content-box">
+    <p>Here are answers to some of the most common questions about our services and processes.</p>
+
+    <div class="faq-item">
+      <div class="faq-question">What services does NovaTech Solutions provide?</div>
+      <div class="faq-answer">We offer web development, system development, IT support, cloud solutions, and cybersecurity services.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How do I request a consultation?</div>
+      <div class="faq-answer">You can request a consultation by visiting our Contact page and filling out the inquiry form.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Do you provide ongoing support after project completion?</div>
+      <div class="faq-answer">Yes, we provide maintenance and support packages to ensure your systems remain secure and efficient.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">Can you customize solutions for my business?</div>
+      <div class="faq-answer">Absolutely. We tailor our solutions to meet the unique needs of each client and industry.</div>
+    </div>
+
+    <div class="faq-item">
+      <div class="faq-question">How secure are your cloud and cybersecurity services?</div>
+      <div class="faq-answer">We implement industry best practices, encryption, and proactive monitoring to ensure maximum security.</div>
+    </div>
+  </div>
+
+  <div class="disclaimer">
+    <p>
+      This website is not the official website of NovaTech Solutions.
+      It was developed for learning XHTML & CSS purposes only.
+    </p>
+    <p>&copy; 2025 NovaTech Solutions. All rights reserved.</p>
+    <p>Recommended Browser: Google Chrome | Resolution: 1366 × 768</p>
+    <p>Last Updated: January 2026</p>
+  </div>
+</div>
+
+</body>
+</html>

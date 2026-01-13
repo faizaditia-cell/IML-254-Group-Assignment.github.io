@@ -1,0 +1,288 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="NovaTech Solutions - Professional IT Solutions Company">
+<meta name="author" content="NovaTech Solutions">
+<title>NovaTech Solutions | Home</title>
+
+<style>
+/* =======================
+   Base Style
+   ======================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d; /* dark background */
+    color: #e0e0e0;           /* light gray text */
+}
+
+/* =======================
+   Sidebar Navigation
+   ======================= */
+.sidebar {
+    width: 220px;
+    background-color: #1a1a1a; /* charcoal sidebar */
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    text-align: center;
+    color: #39ff14; /* neon green accent */
+    margin-bottom: 20px;
+}
+
+/* Links */
+.sidebar a {
+    display: block;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.sidebar a:hover {
+    background-color: #333;
+    color: #ff00ff; /* neon magenta hover */
+}
+
+/* =======================
+   Dropdown (Sub-menu)
+   ======================= */
+.dropdown-btn {
+    width: 100%;
+    border: none;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.dropdown-btn:hover {
+    background-color: #333;
+    color: #ff00ff;
+}
+
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+}
+
+.dropdown-container a {
+    padding-left: 40px;
+    font-size: 13px;
+}
+
+.dropdown-container a:hover {
+    background-color: #333;
+    color: #39ff14;
+}
+
+/* =======================
+   Main Content
+   ======================= */
+.main {
+    margin-left: 220px;
+    padding: 30px;
+}
+
+.banner {
+    width: 100%;
+    height: 350px;
+    overflow: hidden;
+    border-radius: 8px;
+    background-color: #000;
+}
+
+/* Banner Video */
+.banner video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+/* Page Title */
+.page-title {
+    margin-top: 25px;
+    color: #ff00ff; /* neon magenta */
+}
+
+/* Content Box */
+.content-box {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    box-shadow: 0 0 10px #39ff14; /* glowing effect */
+}
+
+/* =======================
+   Button Container
+   ======================= */
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 15px;
+}
+
+.button-container a {
+    display: inline-block;
+    padding: 10px 20px;
+    background-color: #39ff14; /* neon green */
+    color: #0d0d0d;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-container.button-container a {
+    display: block;
+    margin: 8px 15px;
+    padding: 10px 15px;
+    background-color: #39ff14;
+    color: #0d0d0d;
+    text-decoration: none;
+    border-radius: 5px;
+    font-weight: bold;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.dropdown-container.button-container a:hover {
+    background-color: #ff00ff;
+    color: #fff;
+}
+
+.button-container a:hover {
+    background-color: #ff00ff; /* neon magenta hover */
+    color: #fff;
+}
+
+/* =======================
+   Footer
+   ======================= */
+.disclaimer {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #1a1a1a;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+    border-top: 1px solid #39ff14;
+}
+</style>
+
+<script>
+/* =======================
+   Dropdown JavaScript
+   ======================= */
+document.addEventListener("DOMContentLoaded", function () {
+    var dropdown = document.getElementsByClassName("dropdown-btn");
+
+    for (var i = 0; i < dropdown.length; i++) {
+        dropdown[i].addEventListener("click", function () {
+            var dropdownContent = this.nextElementSibling;
+            dropdownContent.style.display =
+                dropdownContent.style.display === "block" ? "none" : "block";
+        });
+    }
+});
+</script>
+</head>
+
+<body>
+
+<!-- Sidebar -->
+<div class="sidebar">
+<h3>NOVATECH</h3>
+
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+
+<button class="dropdown-btn">Services ▾</button>
+<div class="dropdown-container">
+    <a href="services.html">All Services</a>
+    <a href="web-development.html">Web Development</a>
+    <a href="system-development.html">System Development</a>
+    <a href="it-support.html">IT Support</a>
+    <a href="cloud-solutions.html">Cloud Solutions</a>
+    <a href="cybersecurity.html">Cybersecurity</a>
+</div>
+
+<a href="projects.html">Projects</a>
+<a href="policies.html">Company Policies</a>
+<a href="careers.html">Careers</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact Us</a>
+<a href="disclaimer.html">Disclaimer</a>
+<a href="group.html">Group</a>
+</div>
+
+<!-- Main Content -->
+<div class="main">
+
+<!-- Banner -->
+<div class="banner">
+<video autoplay muted loop playsinline>
+    <source src="novatech logo fr.mp4" type="video/mp4">
+</video>
+</div>
+
+<h1 class="page-title">Welcome to NovaTech Solutions.</h1>
+
+<div class="content-box">
+<p>
+NovaTech Solutions is a professional IT solutions company providing reliable
+digital services to help businesses improve efficiency, security, and growth.
+</p>
+
+<p>
+Our services include web development, system development, IT support,
+cloud solutions, and cybersecurity for modern organizations.
+</p>
+
+<div class="button-container">
+<a href="projects.html">Projects</a>
+<a href="policies.html">Company Policies</a>
+<a href="careers.html">Careers</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact Us</a>
+<a href="disclaimer.html">Disclaimer</a>
+<a href="group.html">Group</a>
+</div>
+
+<button class="dropdown-btn">Services ▾</button>
+<div class="dropdown-container button-container">
+    <a href="services.html">All Services</a>
+    <a href="web-development.html">Web Development</a>
+    <a href="system-development.html">System Development</a>
+    <a href="it-support.html">IT Support</a>
+    <a href="cloud-solutions.html">Cloud Solutions</a>
+    <a href="cybersecurity.html">Cybersecurity</a>
+</div>
+
+</div>
+</div>
+
+<!-- Footer -->
+<div class="disclaimer">
+<p>
+This website is not the official website of NovaTech Solutions.
+It was developed for learning XHTML & CSS purposes only.
+</p>
+<p>&copy; 2025 NovaTech Solutions. All rights reserved.</p>
+<p>Recommended Browser: Google Chrome | Resolution: 1366 × 768</p>
+<p>Last Updated: January 2026</p>
+</div>
+
+</body>
+</html>

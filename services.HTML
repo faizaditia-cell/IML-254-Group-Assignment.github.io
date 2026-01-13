@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>NovaTech Solutions | Services</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<style>
+/* =======================
+   Base Style
+   ======================= */
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background-color: #0d0d0d; /* dark background */
+    color: #e0e0e0;           /* light gray text */
+}
+
+/* =======================
+   Sidebar Navigation
+   ======================= */
+.sidebar {
+    width: 220px;
+    background-color: #1a1a1a; /* charcoal sidebar */
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+    overflow-y: auto;
+}
+
+.sidebar h3 {
+    text-align: center;
+    color: #39ff14; /* neon green accent */
+    margin-bottom: 20px;
+}
+
+/* Links */
+.sidebar a, .dropdown-btn {
+    display: block;
+    color: #e0e0e0;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    transition: background-color 0.3s, color 0.3s;
+    border: none;
+    background-color: #1a1a1a;
+    text-align: left;
+    cursor: pointer;
+}
+
+.sidebar a:hover, .dropdown-btn:hover {
+    background-color: #333;
+    color: #ff00ff; /* neon magenta hover */
+}
+
+/* =======================
+   Dropdown (Sub-menu)
+   ======================= */
+.dropdown-container {
+    display: none;
+    background-color: #262626;
+}
+
+.dropdown-container a {
+    padding-left: 40px;
+    font-size: 13px;
+}
+
+.dropdown-container a:hover {
+    background-color: #333;
+    color: #39ff14;
+}
+
+/* =======================
+   Main Content
+   ======================= */
+.main {
+    margin-left: 220px;
+    padding: 30px;
+}
+
+.page-title {
+    color: #ff00ff; /* neon magenta */
+}
+
+/* Content Box */
+.content-box {
+    background-color: #1a1a1a;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 15px;
+    line-height: 1.6;
+    color: #e0e0e0;
+    box-shadow: 0 0 10px #39ff14; /* glowing effect */
+}
+
+/* =======================
+   Card Container Styles
+   ======================= */
+.card-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    margin-top: 25px;
+}
+
+.card {
+    background-color: #1a1a1a;
+    border-radius: 8px;
+    overflow: hidden;
+    text-align: center;
+    transition: transform 0.3s;
+    box-shadow: 0 0 10px #ff00ff; /* neon glow */
+}
+
+.card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 15px #39ff14;
+}
+
+.card img {
+    width: 100%;
+    height: 140px;
+    object-fit: cover;
+}
+
+.card h3 {
+    margin: 10px 0;
+    color: #39ff14; /* neon green headings */
+}
+
+.card a {
+    display: block;
+    padding: 10px;
+    background-color: #39ff14; /* neon green button */
+    color: #0d0d0d;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 0 0 8px 8px;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+.card a:hover {
+    background-color: #ff00ff; /* neon magenta hover */
+    color: #fff;
+}
+
+/* =======================
+   Footer
+   ======================= */
+.disclaimer {
+    margin-top: 40px;
+    padding: 15px;
+    background-color: #1a1a1a;
+    text-align: center;
+    font-size: 12px;
+    color: #ccc;
+    border-top: 1px solid #39ff14;
+}
+</style>
+
+<script>
+document.addEventListener("DOMContentLoaded",()=>{
+  document.querySelector(".dropdown-btn").onclick=function(){
+    let d=this.nextElementSibling;
+    d.style.display=d.style.display==="block"?"none":"block";
+  };
+});
+</script>
+</head>
+
+<body>
+
+<div class="sidebar">
+<h3>NOVATECH</h3>
+<a href="index.html">Home</a>
+<a href="about.html">About Us</a>
+<button class="dropdown-btn">Services ▾</button>
+<div class="dropdown-container">
+<a href="services.html">All Services</a>
+<a href="web-development.html">Web Development</a>
+<a href="system-development.html">System Development</a>
+<a href="it-support.html">IT Support</a>
+<a href="cloud-solutions.html">Cloud Solutions</a>
+<a href="cybersecurity.html">Cybersecurity</a>
+</div>
+<a href="projects.html">Projects</a>
+<a href="policies.html">Company Policies</a>
+<a href="careers.html">Careers</a>
+<a href="faq.html">FAQ</a>
+<a href="contact.html">Contact</a>
+<a href="disclaimer.html">Disclaimer</a>
+<a href="group.html">Group</a>
+</div>
+
+<div class="main">
+<h1 class="page-title">Our Services</h1>
+<div class="content-box">
+<p>
+We provide professional IT services including development, support, cloud solutions, IT Support, and cybersecurity.
+</p>
+</div>
+
+<!-- ✅ Neon Card Section -->
+<div class="card-container">
+    <div class="card">
+        <img src="Web development pic.jpg" alt="Web Development">
+        <h3>Web Development</h3>
+        <a href="web-development.html">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="System development pic.jpg" alt="System Development">
+        <h3>System Development</h3>
+        <a href="system-development.html">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="Cloud storage pic.jpg" alt="Cloud Solutions">
+        <h3>Cloud Solutions</h3>
+        <a href="cloud-solutions.html">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="Cybersecurity pic.jpg" alt="Cybersecurity">
+        <h3>Cybersecurity</h3>
+        <a href="cybersecurity.html">Learn More</a>
+    </div>
+    <div class="card">
+        <img src="IT support pic.jpg" alt="IT Support">
+        <h3>IT Support</h3>
+        <a href="it-support.html">Learn More</a>
+    </div>
+</div>
+
+<div class="disclaimer">
+<p>
+This website is not the official website of NovaTech Solutions.
+It was developed for learning XHTML & CSS purposes only.
+</p>
+<p>&copy; 2025 NovaTech Solutions. All rights reserved.</p>
+<p>Recommended Browser: Google Chrome | Resolution: 1366 × 768</p>
+<p>Last Updated: January 2026</p>
+</div>
+</div>
+
+</body>
+</html>
